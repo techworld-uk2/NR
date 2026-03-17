@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Narcissism Test | Clarity Awaits</title>
+    <title>Relationship Clarity | The Advanced Dynamics Assessment</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
     <script>
@@ -16,21 +16,17 @@
     s.parentNode.insertBefore(t,s)
     }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '1277280944362161'); // Your Pixel ID
+    fbq('init', '1277280944362161'); 
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent');
     </script>
-	
-	<noscript><img height="1" width="1" style="display:none"
-	src="https://www.facebook.com/tr?id=1277280944362161&ev=PageView&noscript=1"
-	/></noscript>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1277280944362161&ev=PageView&noscript=1"/></noscript>
     <style>
         :root {
             --primary: #ff4757;
             --primary-glow: rgba(255, 71, 87, 0.4);
-            --bg: #050608;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(255, 255, 255, 0.1);
+            --bg: #0a0b10;
+            --card-bg: rgba(255, 255, 255, 0.02);
+            --border: rgba(255, 255, 255, 0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,214 +34,202 @@
             background-color: var(--bg); 
             color: #fff; 
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        /* Smooth reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* Scarcity Header */
-        .top-bar {
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(10px);
-            padding: 12px;
+        /* Trust Bar for Meta Ads Policy (Legitimacy) */
+        .trust-bar {
+            background: #000;
+            padding: 10px;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            font-size: 0.75rem;
+            color: #666;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid var(--border);
         }
 
         /* Hero Section */
         .hero {
             position: relative;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            /* Replace the URL below with your uploaded image link */
-            background: linear-gradient(rgba(5, 6, 8, 0.7), rgba(5, 6, 8, 0.9)), 
-                        url('image.png'); 
+            background: linear-gradient(rgba(10, 11, 16, 0.85), rgba(10, 11, 16, 0.95)), 
+                        url('image.png'); /* Ensure this image is high-end/professional */
             background-size: cover;
             background-position: center;
-            padding: 20px;
+            padding: 100px 20px;
         }
 
-        .hero-content { max-width: 900px; }
+        .hero-content { max-width: 850px; text-align: center; }
 
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 7vw, 5rem);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
             line-height: 1.1;
             margin-bottom: 25px;
+            font-weight: 700;
         }
 
-        .highlight { color: var(--primary); font-style: italic; }
+        .highlight { color: var(--primary); }
 
         .sub-headline {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: #ced4da;
-            margin-bottom: 40px;
-            max-width: 700px;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            color: #a0a0a0;
+            margin-bottom: 45px;
+            max-width: 650px;
             margin-inline: auto;
-            font-weight: 300;
         }
 
-        /* CTA */
+        /* High Conversion CTA */
+        .cta-wrapper { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+
         .cta-main {
             display: inline-block;
-            padding: 22px 55px;
+            padding: 24px 60px;
             background: var(--primary);
             color: white;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.1rem;
-            border-radius: 4px;
+            font-size: 1.2rem;
+            border-radius: 2px;
             text-transform: uppercase;
             letter-spacing: 2px;
-            transition: 0.3s;
-            box-shadow: 0 10px 40px var(--primary-glow);
-            cursor: pointer;
-            border: none;
+            transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 15px 45px var(--primary-glow);
         }
 
         .cta-main:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px var(--primary-glow);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px var(--primary-glow);
             filter: brightness(1.1);
         }
 
-        /* Feature Grid */
-        .section { padding: 120px 20px; max-width: 1200px; margin: auto; }
+        /* Ebook Visual Section */
+        .ebook-teaser {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            padding: 100px 20px;
+            background: #0d0e14;
+            flex-wrap: wrap;
+        }
+
+        .ebook-img {
+            width: 300px;
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Features */
+        .section { padding: 100px 20px; max-width: 1200px; margin: auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
-        .section-title {
-            text-align: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-        }
-
         .glass-card {
-            background: var(--glass);
-            padding: 50px;
-            border-radius: 2px;
+            background: var(--card-bg);
+            padding: 60px 40px;
             border: 1px solid var(--border);
-            backdrop-filter: blur(10px);
-            transition: 0.4s;
+            transition: 0.3s;
         }
 
-        .card-num {
-            color: var(--primary);
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            display: block;
-            margin-bottom: 15px;
-        }
+        .glass-card:hover { border-color: var(--primary); background: rgba(255,255,255,0.04); }
 
+        .card-num { color: var(--primary); font-family: 'Playfair Display', serif; font-size: 1.2rem; margin-bottom: 10px; display: block; }
+
+        /* Legal Footer (Crucial for Meta Ads) */
         footer {
-            padding: 60px 20px;
+            padding: 80px 20px;
+            background: #000;
             text-align: center;
             border-top: 1px solid var(--border);
-            color: #4b5563;
-            font-size: 0.9rem;
         }
 
-        #timer { color: var(--primary); font-weight: bold; margin-left: 10px; }
+        .legal-links a { color: #666; text-decoration: none; margin: 0 15px; font-size: 0.8rem; }
+        .legal-links a:hover { color: #fff; }
+        .disclaimer { max-width: 800px; margin: 30px auto; font-size: 0.75rem; color: #444; line-height: 1.4; }
 
     </style>
 </head>
 <body>
 
-    <div class="top-bar">
-        ⚡ ANALYSIS CLOSING IN: <span id="timer">05:00</span> — 142 PEOPLE CURRENTLY TESTING
-    </div>
+    <div class="trust-bar">The 2026 Relationship Clarity Initiative</div>
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="reveal">Is Your Partner A <br><span class="highlight">Narcissist?</span></h1>
-            <p class="sub-headline reveal">Stop the gaslighting. Reveal the hidden patterns of manipulation with our private, clinically-modeled assessment.</p>
-            <div class="reveal">
-                <a href="https://tally.so/r/yPydR4" class="cta-main" onclick="trackLead(event)">Start Free Assessment →</a>
+            <h1 class="reveal">Identify High-Conflict <br><span class="highlight">Personality Patterns.</span></h1>
+            <p class="sub-headline reveal">Stop the cycle of confusion. Gain clinical-grade insights into complex relationship dynamics with our evidence-based assessment and Clarity Blueprint eBook.</p>
+            <div class="cta-wrapper reveal">
+                <a href="https://tally.so/r/yPydR4" class="cta-main" onclick="trackLead()">Begin Free Assessment →</a>
+                <p style="font-size: 0.85rem; color: #555;">Join 50,000+ others seeking clarity this year.</p>
             </div>
-            <p class="reveal" style="margin-top:25px; font-size: 0.8rem; color: #6b7280;">✔ 100% PRIVATE & SECURE • INSTANT RESULTS</p>
         </div>
     </section>
 
+    <section class="ebook-teaser">
+        <div class="reveal" style="max-width: 500px;">
+            <h2 style="font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 20px;">The Clarity Blueprint</h2>
+            <p style="color: #a0a0a0; margin-bottom: 25px;">Included with your results: Our comprehensive 120-page guide on navigating complex personalities, establishing boundaries, and reclaiming your mental peace.</p>
+            <ul style="list-style: none; color: #1dd1a1; font-weight: 600; margin-bottom: 30px;">
+                <li>✓ Identifying Narcissistic Traits (The 12 Signs)</li>
+                <li>✓ The Gaslighting Recovery Protocol</li>
+                <li>✓ Boundary Setting Frameworks</li>
+            </ul>
+        </div>
+        <img src="ebook-cover1.png" alt="Ebook Cover" class="ebook-img reveal">
+    </section>
+
     <div class="section">
-        <h2 class="section-title reveal">The Three Pillars of Clarity</h2>
         <div class="grid">
             <div class="glass-card reveal">
-                <span class="card-num">01.</span>
-                <h3>Behavioral Analysis</h3>
-                <p>Pinpoint the specific cycles of "Love Bombing" and "Devaluation" that keep you trapped.</p>
+                <span class="card-num">Step 01.</span>
+                <h3>Objective Analysis</h3>
+                <p>Move past emotion and look at behavioral data points to understand the health of your dynamic.</p>
             </div>
             <div class="glass-card reveal">
-                <span class="card-num">02.</span>
-                <h3>Psychological Impact</h3>
-                <p>Understand how chronic manipulation is affecting your nervous system and memory.</p>
+                <span class="card-num">Step 02.</span>
+                <h3>The Clarity Score</h3>
+                <p>Receive an immediate assessment categorizing the intensity of high-conflict patterns detected.</p>
             </div>
             <div class="glass-card reveal">
-                <span class="card-num">03.</span>
-                <h3>Actionable Path</h3>
-                <p>Receive a clear score indicating the severity of toxic traits and your next logical step.</p>
+                <span class="card-num">Step 03.</span>
+                <h3>The Road Map</h3>
+                <p>Get a step-by-step action plan tailored to your specific situation, focused on emotional safety.</p>
             </div>
         </div>
     </div>
 
-    <footer><a href="privacy.html">Privacy Policy</a> |
-<a href="terms.html">Terms & Conditions</a> |
-<a href="disclaimer.html">Disclaimer</a>
-        <p>&copy; 2026 Relationship Insight. For awareness and educational purposes only.</p>
+    <footer>
+        <div class="legal-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+        <p class="disclaimer">
+            Disclaimer: This assessment is intended for educational purposes only. It is not a substitute for professional clinical diagnosis or medical advice. We do not store personal identifiable information without consent. This site is not a part of the Facebook website or Facebook Inc. Additionally, This site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of FACEBOOK, Inc.
+        </p>
+        <p style="color: #333; font-size: 0.8rem;">&copy; 2026 Relationship Insight Media. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Meta Pixel Tracking Function
-        function trackLead(e) {
-            // Fires the Lead event to Meta
-            fbq('track', 'Lead');
-            // Allow a tiny delay for the pixel to fire before redirecting if needed, 
-            // though most modern browsers handle this fine without a delay.
+        function trackLead() {
+            fbq('track', 'Lead', { content_name: 'Clarity Assessment' });
         }
 
-        // Scroll Reveal Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-        // Urgency Timer
-        let time = 300;
-        setInterval(() => {
-            let m = Math.floor(time / 60);
-            let s = time % 60;
-            const timerEl = document.getElementById('timer');
-            if(timerEl) timerEl.innerHTML = `${m}:${s < 10 ? '0' : ''}${s}`;
-            if (time > 0) time--;
-        }, 1000);
     </script>
 </body>
 </html>
