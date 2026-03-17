@@ -6,6 +6,20 @@
     <title>The Narcissism Test | Clarity Awaits</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     
+    <script>
+    !function(f,b,e,v,n,t,s){
+    if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '947062011145641'); // Your Pixel ID
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent');
+    </script>
     <style>
         :root {
             --primary: #ff4757;
@@ -58,8 +72,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            /* Replace the URL below with your uploaded image link */
             background: linear-gradient(rgba(5, 6, 8, 0.7), rgba(5, 6, 8, 0.9)), 
-                        url('image.png'); /* INSERT YOUR IMAGE HERE */
+                        url('image.png'); 
             background-size: cover;
             background-position: center;
             padding: 20px;
@@ -85,9 +100,7 @@
             font-weight: 300;
         }
 
-        /* Million-Dollar CTA */
-        .cta-container { position: relative; display: inline-block; }
-        
+        /* CTA */
         .cta-main {
             display: inline-block;
             padding: 22px 55px;
@@ -101,6 +114,8 @@
             letter-spacing: 2px;
             transition: 0.3s;
             box-shadow: 0 10px 40px var(--primary-glow);
+            cursor: pointer;
+            border: none;
         }
 
         .cta-main:hover {
@@ -134,11 +149,6 @@
             transition: 0.4s;
         }
 
-        .glass-card:hover {
-            background: rgba(255,255,255,0.06);
-            border-color: var(--primary);
-        }
-
         .card-num {
             color: var(--primary);
             font-family: 'Playfair Display', serif;
@@ -147,7 +157,6 @@
             margin-bottom: 15px;
         }
 
-        /* Footer */
         footer {
             padding: 60px 20px;
             text-align: center;
@@ -156,7 +165,6 @@
             font-size: 0.9rem;
         }
 
-        /* Timer pulse */
         #timer { color: var(--primary); font-weight: bold; margin-left: 10px; }
 
     </style>
@@ -171,8 +179,8 @@
         <div class="hero-content">
             <h1 class="reveal">Is Your Partner A <br><span class="highlight">Narcissist?</span></h1>
             <p class="sub-headline reveal">Stop the gaslighting. Reveal the hidden patterns of manipulation with our private, clinically-modeled assessment.</p>
-            <div class="cta-container reveal">
-                <a href="https://tally.so/r/yPydR4" class="cta-main">Start Free Assessment →</a>
+            <div class="reveal">
+                <a href="https://tally.so/r/yPydR4" class="cta-main" onclick="trackLead(event)">Start Free Assessment →</a>
             </div>
             <p class="reveal" style="margin-top:25px; font-size: 0.8rem; color: #6b7280;">✔ 100% PRIVATE & SECURE • INSTANT RESULTS</p>
         </div>
@@ -204,6 +212,14 @@
     </footer>
 
     <script>
+        // Meta Pixel Tracking Function
+        function trackLead(e) {
+            // Fires the Lead event to Meta
+            fbq('track', 'Lead');
+            // Allow a tiny delay for the pixel to fire before redirecting if needed, 
+            // though most modern browsers handle this fine without a delay.
+        }
+
         // Scroll Reveal Observer
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -220,7 +236,8 @@
         setInterval(() => {
             let m = Math.floor(time / 60);
             let s = time % 60;
-            document.getElementById('timer').innerHTML = `${m}:${s < 10 ? '0' : ''}${s}`;
+            const timerEl = document.getElementById('timer');
+            if(timerEl) timerEl.innerHTML = `${m}:${s < 10 ? '0' : ''}${s}`;
             if (time > 0) time--;
         }, 1000);
     </script>
